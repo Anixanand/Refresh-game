@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+          <meta charset="UTF-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Its Fun Time</title>
+          <style>
+                 body{
+                           background-color: rgb(0, 234, 255);
+                 }  
+                  
+                    .container{
+                    display: flex;
+                    flex-direction: column;
+                  align-items: center;
+                 
+                              
+                    }
+                    .con{
+                              display: flex;
+                    }
+                    .item{    font-size: large;
+                              font-weight: bold;
+                              margin: 5rem;
+                             
+                    }
+                   img{
+                             height: 150px;
+                             width: 150px;
+                             background-color: rgb(207, 237, 14);
+                                  }
+                   
+          </style>
+</head>
+<body>
+         
+         <div class="container">
+                   <h2>Challenge me</h2>
+          <h1>Challenge me </h1>
+          <div class="con">
+          <div class="item">
+                    <p>player 1</p>
+                    <img src="img/1.png" alt="loading">
+          </div>
+          <div class="item">
+                    <p>player 2</p>
+                    <img src="img/1.png" alt="loading">
+          </div>
+</div>
+
+         </div>
+         <script>
+                  
+               var randomno1=Math.floor(1+Math.random()*6);
+               var im="img/"+randomno1+".png";
+               document.querySelectorAll("img")[0].setAttribute("src",im);
+               var randomno=Math.floor(1+Math.random()*6);
+               var im="img/"+randomno+".png";
+               document.querySelectorAll("img")[1].setAttribute("src",im);
+               if(randomno1>randomno){
+                         document.querySelector("h1").innerHTML="Player 1 wins!";
+               }
+               else if(randomno1<randomno){
+                    document.querySelector("h1").innerHTML="Player 2 wins!";         
+               }
+               else {
+                    document.querySelector("h1").innerHTML="Match drawn!";
+               }
+               
+         </script>
+
+</body>
+</html>
